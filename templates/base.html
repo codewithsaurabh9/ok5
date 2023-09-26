@@ -59,7 +59,7 @@
 
       <!-- Logo -->
       <a class="logo" href="#home">
-          <h2> Elora </h2> 
+          <h2> saurabh </h2> 
           <!-- <img src="assets/images/logo.png" alt="logo" /> -->
       </a>
       <!-- Logo End -->
@@ -92,10 +92,14 @@
   <!-------------------- Footer Area (Start) -------------------->
   <footer>
     <div class="social">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
+        {% for soc in Social_media %}
+        <a href="{{soc.social_media_link}}" class="{{soc.social_icon}}"></a>
+        {% endfor %} 
+        
+        <!-- <a href="#" class="fab fa-twitter"></a>
         <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin-in"></a>
+        <a href="#" class="fab fa-linkedin-in"></a> -->
+
     </div>
 
     <div class="content">
@@ -142,7 +146,7 @@
   </script>
 
   <!-- Contact-Form Script -->
-  <script>
+  <!-- <script>
       jQuery('#contactUs-Form').on('submit',function(e){
         jQuery('#msg').html('');
         jQuery('#submit').html('Please wait');
@@ -160,7 +164,7 @@
         });
         e.preventDefault();
       });
-  </script>
+  </script> -->
 
 </body>
 </html>
